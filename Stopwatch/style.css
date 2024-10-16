@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+* {
+    /* jarak setiap element html */
+    margin: 0;
+    /* jarak antara isi konten dengan border nya */
+    padding: 0;
+    /* keluarga-font */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    background-color: #222242;
+    height: 100vh;
+    width: 100%;
+    /* agar text dan tombol berada di tengah */
+    text-align: center;
+    /* Bayangkan kita punya kotak besar dan kotak kecil di dalamnya. Jika kita memberi tahu kotak kecil untuk bergerak bebas (position: absolute;), ia akan mencari kotak besar yaitu container sebagai acuan untuk menentukan posisinya.z */
+    position: absolute;
+    /* border: 5px solid pink; */
+}
+
+.wrapper {
+    /* Ketika kita menyimpan position: relative; di dalam position: absolute;, itu seperti kita memiliki gambar kecil yang bisa bergerak bebas di dalam gambar besar, dan gambar kecil itu sendiri bisa sedikit digeser dari posisinya di dalam gambar besar. */
+    position: relative;
+    /* menggeser top nya ke tengah dari atas */
+    top: 50%;
+    /* menggeser left nya ke tengah dari kiri */
+    left: 50%;
+    /* kode ku untuk debugging */
+    /* background-color: pink; */
+    /* akhir kode ku untuk debugging */
+    /* perubahan_bentuk:menerjemahkan */
+    /* tanpa kode ini lebar dan tinggi nya akan 2x dari browser maka nya akku kurangi 50% */
+    /* transform: translate(-50%, -50%); adalah seperti memberi tahu gambar kecil untuk bergerak ke tengah gambar besar. Ini seperti kita menggeser gambar kecil ke kiri dan ke atas setengah dari ukuran gambar kecil itu sendiri. */
+    transform: translate(-50%, -50%);
+}
+
+.wrapper p {
+    /* Ketika kita menyimpan elemen dengan position: relative; di dalam elemen lain yang juga memiliki position: relative;, itu seperti kita memiliki dua gambar besar di papan gambar, dan gambar kecil di dalam gambar besar kedua. */
+    position: relative;
+    /* element ini berada dalam satu baris namun kita mengatur lebar, tinggi dan posisinya  */
+    display: inline-block;
+    /* warna font nya */
+    color: #ffffff;
+    /* memb */
+    z-index: 9999;
+    /* kode untuk debugging */
+    /* background-color:red; */
+    /* akhir kode untuk debugging */
+    /* untuk menggeser element ke belakang */
+    font-size: 48px;
+    /* menggeser element dibawah nya kebawah */
+    margin-bottom: 120px;
+}
+
+/* .wrapper p::before: Ini berarti kita ingin menambahkan sesuatu sebelum setiap paragraf (<p>) yang ada di dalam elemen dengan kelas wrapper. */
+.wrapper p::before {
+    /* : Ini berarti kita menambahkan konten kosong sebelum paragraf tersebut. Jadi, tidak ada teks atau gambar yang ditambahkan, hanya ruang kosong. */
+    content: '';
+    /* position: absolute;: Ini berarti kita ingin menempatkan elemen yang ditambahkan sebelum paragraf tersebut pada posisi tertentu di halaman, tanpa mengikuti tata letak normal. Elemen ini bisa ditempatkan di mana saja di halaman, tergantung pada nilai properti posisi lainnya seperti top, left, right, atau bottom. */
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #151538;
+    /* dibelakang element lain */
+    z-index: -1;
+    border-radius: 50%;
+    /* menggeser element ke kiri dari posisi awa */
+    /* left: -43%; */
+    left: -11%;
+    top: -155%;
+    /* Ini berarti kita memberi nama animasi yang akan digunakan pada elemen. Nama animasinya adalah “shine”. */
+    /* kode dibawah terhubung dengan @keyframes shine */
+    animation-name: shine;
+    /* Ini berarti kita mengatur durasi animasi menjadi 3 detik. Jadi, animasi akan memakan waktu 3 detik untuk menyelesaikan satu siklus penuh.s */
+    animation-duration: 3s;
+    /* jumlah-iterasi-animasi: tak-terbatas */
+    /* Bayangkan kita punya gambar bintang di halaman web yang berkilau. Dengan menggunakan animation-iteration-count: infinite;, kita memberi tahu komputer bahwa bintang itu harus terus berkilau tanpa berhenti. */
+    animation-iteration-count: infinite;
+}
+
+/* @keyframes shine { }: Ini adalah cara kita mendefinisikan animasi yang disebut “shine”. Di dalam kurung kurawal { }, kita akan menulis bagaimana animasi tersebut bekerja, tetapi untuk sekarang, kurung kurawal ini masih kosong. */
+/* terhubung dengan element p karena disana mendefinisikan animasi */
+@keyframes shine {
+    /* Ini adalah titik awal dan akhir dari kilauan. Pada titik ini, bintang kita memiliki bayangan cahaya yang kecil. */
+    0%, 100% {
+        box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, .5);
+    }
+    /* Di tengah-tengah kilauan, bintang kita memiliki bayangan cahaya yang lebih besar, membuatnya terlihat lebih terang. */
+    50% {
+        box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, .5);
+    }
+}
+
+button {
+    background-color: #222242;
+    /* nilai pertama adalah atas dan bawah. lalu nilai kedua adalah kiri dan kanan */
+    padding: 10px 38px;
+    /* bingkai: 1px adalah ketebalannya, solid adalah bentuknya berarti lurus, lalu terakhir adalah warnanya */
+    border: 1px solid #A9A9A9;
+    /* sudut lengkung */
+    border-radius: 28px;
+    color: #fff;
+    /* Tentu! Mari kita bayangkan bahwa kita sedang membuat sebuah tombol ajaib yang berubah warna saat disentuh. Kode CSS transition: all .2s ease; ini membantu membuat perubahan tersebut terlihat lebih halus dan menyenangkan. */
+    /* all: Ini berarti kita ingin semua perubahan pada tombol (seperti warna, ukuran, dll.) menjadi halus */
+    /* .2s: Ini adalah durasi perubahan, yaitu 0,2 detik. Jadi, perubahan akan terjadi dalam waktu 0,2 detik. */
+    /* ease: Ini adalah cara perubahan terjadi, dimulai dengan lambat, kemudian cepat, dan melambat lagi di akhir. */
+    transition: all .2s ease;
+    /* garis luar */
+    /* Bayangkan kamu sedang menggambar di kertas. Ketika kamu menggambar sebuah kotak, kamu mungkin ingin menambahkan garis tepi di sekeliling kotak tersebut. Dalam dunia web, garis tepi ini disebut “outline”. */
+    outline: 0;
+}
+
+/* tombol tapi pengecualian untuk yang terakhir */
+button:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* hover itu ketika mouse diatas tombolnya */
+button:hover,
+/* Bayangkan kamu sedang bermain game di komputer. Ketika kamu mengklik tombol “Mulai”, tombol itu menjadi “aktif” atau “terfokus”. Dalam kode CSS, kita bisa memberi tahu komputer untuk mengubah tampilan tombol ketika tombol itu “terfokus”. */
+button:focus {
+    /* warna bingkai */
+    border-color: #F6B400;
+    color: #F6B400;
+    /* 0px: Ini berarti bayangan tidak bergerak ke kiri atau ke kanan. Bayangannya tetap di tengah.
+    4px: Ini berarti bayangan bergerak sedikit ke bawah, seperti 4 langkah kecil.
+    27px: Ini adalah seberapa kabur atau buram bayangannya. Semakin besar angkanya, semakin kabur bayangannya.
+    -12px: Ini adalah seberapa besar bayangannya. Angka negatif berarti bayangannya lebih kecil dari ukuran aslinya.
+    #F6B400: Ini adalah warna bayangannya. Warna ini seperti warna kuning cerah. */
+    box-shadow: 0px 4px 27px -12px #F6B400;
+}
