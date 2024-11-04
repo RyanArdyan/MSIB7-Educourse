@@ -1,0 +1,164 @@
+/* untuk setiap element html */
+* {
+    /* menghilangkan margin top, right, bottom, left */
+    margin: 0;
+    /* menghilangkan semua padding */
+    padding: 0;
+    /* mengunakan font poppins sebagai yg utama lalu kalau tidak ada maka menggunakan sans-serif */
+    font-family: 'Poppins', sans-serif;
+    /* menggunakan bingkai kotak jadi akan ada bingkai nya */
+    box-sizing: border-box;
+}
+
+/* element tubuh */
+body {
+    /* mengatur warna latar belakang */
+    background: #222;
+}
+
+/* mengatur class card */
+.card {
+    /* lebar nya 90% dari parent nya yaitu element body */
+    width: 90%;
+    /* Tapi, jika kotak besar lebih dari 470 piksel, kartu kita akan berhenti membesar pada 470 piksel, jadi tidak lebih lebar dari itu. */
+    max-width: 470px;
+    /* Linear gradient di CSS adalah cara untuk membuat transisi warna yang halus dari satu warna ke warna lainnya di sepanjang garis lurus. Ini seperti mencampur dua warna cat di atas kanvas dan melihat bagaimana mereka berbaur secara perlahan. */
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    /* warna: font nya */
+    color: #fff;
+    /* margin atau jarak diluar kotak, di keempat sisi */
+    /* 100 itu margin atas, auto itu menggeser .card ke tengah secara horizontal dan 0 itu margin bawah */
+    margin: 100px auto 0;
+    /* buat sudut lengkung */
+    border-radius: 20px;
+    /* nilai pertama adalah atas dan bawah, lalu nilai kedua adalah kiri dan kanan */
+    padding: 40px 35px;
+    /* semua konten di dalam .card akan berada di tengah */
+    text-align: center;
+}
+
+.search {
+    /* kode untuk tes */
+    /* background-color: red; */
+    /* akhir kode untuk tes */
+    width: 100%;
+    /* agar kodenya menjadi satu kolom */
+    display: flex;
+    /* agar ke tengah secara vertikal */
+    align-items: center;
+    /* agar konten nya berada dikiri dan kanan dan ditengah nya kosong */
+    /* membenarkan-konten: jarak-antara */
+    justify-content: space-between;
+}
+
+.search input {
+    /* Ini seperti menghapus semua garis atau bingkai di sekitar kotak. Jadi, tidak ada garis tepi yang terlihat. */
+    border: 0;
+    /* Ini seperti memastikan tidak ada garis tambahan di luar kotak ketika kita menyentuh atau mengetuknya. */
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    /* yg pertama adalah atas dan bawah, yg kedua adalah kiri dan kanan */
+    padding: 10px 25px;
+    /* memberbesar tinggi input nya */
+    height: 60px;
+    /* membuat sudut lengkung */
+    border-radius: 30px;
+    /* Bayangkan kamu punya kotak khusus untuk menulis, dan kotak itu ada di dalam kotak yang lebih besar bersama dengan teman-temannya.
+    flex: 1;: Ini seperti memberi tahu kotak tersebut untuk tumbuh dan mengisi ruang kosong yang tersedia dalam kotak besar, sehingga kotak menulis ini bisa menjadi sebesar mungkin sesuai dengan ruang yang ada.
+    */
+    flex: 1;
+    /* jarak diluar kotak kanan */
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+
+.search button {
+    /* Ini seperti menghapus semua garis atau bingkai di sekitar kotak. Jadi, tidak ada garis tepi yang terlihat. */
+    border: 0;
+    /* Ini seperti memastikan tidak ada garis tambahan di luar kotak ketika kita menyentuh atau mengetuknya. */
+    outline: 0;
+    /* latar belakang */
+    background: #ebfffc;
+    /* sudut tumpul, bingkai-radius */
+    border-radius: 50%;
+    /* lebar */
+    width: 60px;
+    /* tinggi tombol */
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    /* lebar */
+    width: 16px;
+}
+
+.weather-icon {
+    /* lebar */
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    /* ukuran-font */
+    font-size: 80px;
+    /* ketebalan font */
+    font-weight: 500;
+}
+
+.weather h2 {
+    /* ukuran-font */
+    font-size: 45px;
+    /* ketebalan font */
+    font-weight: 400;
+    /* h2 nya akan bergeser ke atas dari posisi aslinya */
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* angka pertama adalah dari sisi y. angka kedua adalah sisi x */
+    padding: 0 20px;
+    margin-top: 50px;   
+}
+
+.col {
+    /* Kode ini seperti memberi tahu kotak mainan besar untuk menjadi elastis dan bisa mengatur semua mainan di dalamnya agar berbaris secara horizontaldengan rapi. */
+    display: flex;
+    /* agar kode nya ke tengah secara vertikal */
+    align-items: center;
+    /* agar teks nya mulai dari sebelah kiri */
+    text-align: left;
+}
+
+/* lebar img nya */
+.col img {
+    width: 40px;
+    /* jarak ke kanan */
+    margin-right: 10px;
+}
+
+/* , itu berarti dan */
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: auto;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    /* text-penyelarasan: kiri */
+    /* teks akan berada dikiri */
+    text-align: left;
+    /* jarak diluar kotak */
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
