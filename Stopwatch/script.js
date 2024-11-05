@@ -11,28 +11,6 @@ let btnStop = document.querySelector('.btn-stop');
 let btnReset = document.querySelector('.btn-reset');
 let interval;
 
-// ketika tombol start nya di click maka jalankan fungsi berikut 
-btnStart.addEventListener('click', () => {
-    // tolong panggil dan jalankan fungsi startTimer setiap 10 mildetik
-    interval = setInterval(startTimer, 10);
-});
-
-// panggil .btn-stop lalu ketika di click maka jalankan fungsi berikut
-btnStop.addEventListener('click', () => {
-    // adalah perintah yang memberitahu komputer untuk menghentikan fungsi yang berjalan berulang kali.
-    clearInterval(interval);
-});
-
-btnReset.addEventListener('click', () => {
-    clearInterval(interval);
-    tens = '00';
-    seconds = '00';
-    mins = '00';
-    getTens.innerHTML = tens;
-    getSeconds.innerHTML = seconds;
-    getMins.innerHTML = mins;
-})
-
 // definisikan fungsi mulai pengatur waktu
 function startTimer() {
     // tambah angka pada value tens nya
@@ -78,3 +56,25 @@ function startTimer() {
         getMins.innerHTML = mins;
     }
 }
+
+// ketika tombol start nya di click maka jalankan fungsi berikut 
+btnStart.addEventListener('click', () => {
+    // tolong panggil dan jalankan fungsi startTimer setiap 10 mildetik
+    interval = setInterval(startTimer, 10);
+});
+
+// panggil .btn-stop lalu ketika di click maka jalankan fungsi berikut
+btnStop.addEventListener('click', () => {
+    // adalah perintah yang memberitahu komputer untuk menghentikan fungsi yang berjalan berulang kali di dalam variable interval
+    clearInterval(interval);
+});
+
+btnReset.addEventListener('click', () => {
+    clearInterval(interval);
+    tens = '00';
+    seconds = '00';
+    mins = '00';
+    getTens.innerHTML = tens;
+    getSeconds.innerHTML = seconds;
+    getMins.innerHTML = mins;
+});

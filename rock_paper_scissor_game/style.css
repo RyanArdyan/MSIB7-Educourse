@@ -1,0 +1,41 @@
+/* tubuh */
+body {
+    /* keluarga-font */
+    font-family: Arial, Helvetica, sans-serif;
+    /* penyelerasan text: tengah */
+    text-align: center;
+}
+
+#opponent-choice {
+    /* lebar */
+    width: 240px;
+    /* tinggi */
+    height: 240px;
+    /* latar-belakang */
+    background-color: cyan;
+    margin-top: 10px;
+}
+
+#your-choice {
+    /* lebar */
+    width: 240px;
+    /* tinggi */
+    height: 240px;
+    /* latar-belakang */
+    background-color: yellow;
+    margin-top: 10px;
+}
+
+#choices {
+    width: 240px;
+    height: 80px;
+    background-color: green;
+    /* angka pertama adalah atas dan bawah, auto adalah kiri dan kanan jadi ketengah */
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#choices img {
+    width: 80px;
+    height: 80px;
+}

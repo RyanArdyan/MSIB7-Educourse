@@ -36,6 +36,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* sementara */
 .wrapper p {
     /* Ketika kita menyimpan elemen dengan position: relative; di dalam elemen lain yang juga memiliki position: relative;, itu seperti kita memiliki dua gambar besar di papan gambar, dan gambar kecil di dalam gambar besar kedua. */
     position: relative;
@@ -93,6 +94,7 @@
     }
 }
 
+
 button {
     background-color: #222242;
     /* nilai pertama adalah atas dan bawah. lalu nilai kedua adalah kiri dan kanan */
@@ -131,3 +133,4 @@ button:focus {
     #F6B400: Ini adalah warna bayangannya. Warna ini seperti warna kuning cerah. */
     box-shadow: 0px 4px 27px -12px #F6B400;
 }
+    
