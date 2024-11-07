@@ -21,7 +21,7 @@ window.onload = function() {
         // dokumen.tambahAcaraPendengar("click", panggil fungsi select choice)
         choice.addEventListener("click", selectChoice);
     }
-}
+};
 
 function selectChoice() {
     // mengambil id dari element yang di klik
@@ -64,9 +64,6 @@ function selectChoice() {
             }
         }
     }
-
     document.getElementById("your-score").innerText = yourScore;
     document.getElementById("opponent-score").innerText = opponentScore;
-
-    console.log(yourScore);
 };

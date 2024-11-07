@@ -1,4 +1,3 @@
-/* tubuh */
 body {
     /* keluarga-font */
     font-family: Arial, Helvetica, sans-serif;
@@ -8,9 +7,9 @@ body {
 
 #opponent-choice {
     /* lebar */
-    width: 240px;
+    width: 150px;
     /* tinggi */
-    height: 240px;
+    height: 150px;
     /* latar-belakang */
     background-color: cyan;
     margin-top: 10px;
@@ -18,9 +17,9 @@ body {
 
 #your-choice {
     /* lebar */
-    width: 240px;
+    width: 150px;
     /* tinggi */
-    height: 240px;
+    height: 150px;
     /* latar-belakang */
     background-color: yellow;
     margin-top: 10px;
