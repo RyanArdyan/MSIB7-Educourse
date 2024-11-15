@@ -1,0 +1,27 @@
+#gameContainer {
+    /* agar text nya berada di tengaha */
+    text-align: center;
+}
+
+#gameBoard {
+    /* bingkai: tebal lurus hitam */
+    border: 3px solid black;
+}
+
+#score {
+    /* font-keluarga: "font-utama", font-cadangan */
+    font-family: "Permanent Marker", cursive;
+    /* font-ukuran */
+    font-size: 100px;
+}
+
+#resetBtn {
+    /* font-keluarga: */
+    font-family: "Permanent Marker", cursive;
+    /* font-ukuran: */
+    font-size: 22px;
+    width: 100px;
+    height: 50px;
+    /* bingkai: tebal lurus hitam */
+    border: 4px solid black;
+}
