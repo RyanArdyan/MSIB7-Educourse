@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+}
+
+.container {
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+/* Bayangkan kamu punya kotak mainan (elemen .container). Dengan kode ini, kamu bisa menambahkan label atau stiker di depan kotak itu tanpa membuka kotaknya. Tapi, untuk membuatnya bekerja, kita perlu memberi tahu apa yang ingin kita tambahkan */
+.container::before {
+    /* Tentu! Kode content: ''; digunakan untuk membuat pseudo-element, seperti yang kita bicarakan sebelumnya, tetapi kali ini kita tidak menambahkan teks atau gambar apa pun. Ini seperti menyiapkan tempat kosong di depan atau di belakang elemen tanpa menaruh apa pun di sana. Bayangkan kamu punya kotak mainan (elemen .container) dan kamu ingin menambahkan ruang kosong di depannya. Dengan kode ini: */
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    /* melengkus di setiap sudut */
+    border-radius: 5px;
+    /* /* Bayangkan kita punya kotak di halaman web. Dengan position: absolute;, kita bisa menempatkan kotak ini di mana saja di halaman, seperti di sudut kanan atas atau di tengah halaman, tanpa mengganggu tata letak elemen lainnya. */
+    position: absolute;
+    /* Bayangkan kamu punya kotak mainan yang bisa kamu geser ke kiri atau ke kanan di atas meja. Kode left: -50px; berarti kamu menggeser kotak mainan itu 50 piksel ke kiri dari posisi awalnya. */
+    left: -50px;
+    top: -50px;
+    /* Jika kamu menggunakan z-index: -1;, itu berarti kamu menempatkan elemen tersebut di bawah elemen lainnya. Misalnya, jika kamu punya dua gambar dan kamu ingin gambar pertama berada di belakang gambar kedua, kamu bisa menggunakan kode ini: */
+    z-index: -1;
+}
+
+/* Misalnya, setiap kali kita punya elemen dengan kelas container, setelah itu elemen itu akan muncul kata “Halo!” dengan warna merah. */
+.container::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.clock span {
+    font-size: 80px;
+    width: 110px;
+    /* Dengan display: inline-block;, kotak mainanmu bisa berbaris satu di sebelah yang lain, seperti teman-teman yang berdiri bersebelahan. Tapi, berbeda dengan display: inline;, kamu juga bisa mengatur lebar dan tinggi kotak mainan ini. */
+    display: inline-block;  
+    /* penyelarasan-text: tengah, agar text berada di tengah */
+    text-align: center;
+    /* kita memberi tahu elemen tersebut untuk tetap berada di tempatnya, tetapi kita bisa menggesernya sedikit dari posisi aslinya. */
+    position: relative;
+}
+
+
+/* Misalnya, setiap kali kita punya elemen dengan kelas container, setelah itu elemen itu akan muncul kata “Halo!” dengan warna merah. */ 
+.clock span::after{
+    /* ukuran-font: 16px */
+    font-size: 16px;
+    /* Bayangkan kita punya kotak di halaman web. Dengan position: absolute;, kita bisa menempatkan kotak ini di mana saja di halaman, seperti di sudut kanan atas atau di tengah halaman, tanpa mengganggu tata letak elemen lainnya. */
+    position: absolute;
+    /* element akan bergeser kebawah dari posisi aslinya */
+    bottom: -5px; 
+    /* Bayangkan kita sedang membuat sebuah jam digital di halaman web. Kode CSS ini membantu kita menambahkan kata “HOURS” setelah angka jam. Jadi, jika jam menunjukkan angka 10, maka akan tampil “10 HOURS”. */
+    left: 50%;
+    /* Kode transform: translateX(-50%); digunakan untuk menggeser posisi suatu elemen di halaman web. Bayangkan kita punya kotak yang berada di tengah layar. Kode ini akan menggeser kotak tersebut ke kiri sebesar setengah dari lebarnya sendiri. */
+    transform: translateX(-50%);
+}
+
+
+
+
+
+/* Bayangkan kita punya sebuah kotak di halaman web yang menunjukkan jumlah jam. Kode CSS ini membantu kita menambahkan kata “HOURS” setelah angka jam di dalam kotak tersebut. */
+#hrs::after {
+    content: 'HOURS';
+} 
+
+/* Bayangkan kita punya sebuah kotak di halaman web yang menunjukkan jumlah menit. Kode CSS ini membantu kita menambahkan kata "MINS" setelah angka menit di dalam kotak tersebut. */
+#min::after {
+    content: 'MINS';
+}
+
+/* Bayangkan kita punya sebuah kotak di halaman web yang menunjukkan pelajaran detik. Kode CSS ini membantu kita menambahkan kata "SEC" setelah angka detik di dalam kotak tersebut. */
+#sec::after {
+    content: 'SEC';
+}
