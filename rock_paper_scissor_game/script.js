@@ -6,26 +6,12 @@ let opponentScore = 0;
 // buat array pilihan untuk menyimpan pilihan
 let choices = ["rock", "paper", "scissors"];
 
-// jendela.ketika dimuat maka jalankan fungsi berikut
-window.onload = function() {
-    // ada 3 pengulangan
-    for (let i = 0; i < 3; i++) {
-        // buat element img
-        let choice = document.createElement("img");
-        // Dalam kode JavaScript tersebut, choice.id = choices[i]; adalah cara untuk memberikan setiap elemen gambar (img) ID yang unik dari array choices.
-        choice.id = choices[i];
-        // panggil elmement img lalu attribute src nya diisi dengan value dari array choices lalu di gabung dengan .png
-        choice.src = "image/" + choices[i] + ".png";
-        // panggil element id choices lalu tambahkan img dengan id dan img yang sudah dibuat
-        document.getElementById("choices").append(choice);
-        // dokumen.tambahAcaraPendengar("click", panggil fungsi select choice)
-        choice.addEventListener("click", selectChoice);
-    }
-};
 
-function selectChoice() {
+
+function selectChoice(id) {
+    // console.log(id);
     // mengambil id dari element yang di klik
-    you = this.id;
+    you = id;
     // dapatkan element dengan id your-choice, src nya diisi dengan 
     document.getElementById("your-choice").src = "image/" + you + ".png";
 
@@ -37,33 +23,48 @@ function selectChoice() {
     document.getElementById("opponent-choice").src = "image/" + opponent + ".png";
     
     // check for winner
-    // jika you sama dengan opponent misalnya user memilih gunting lalu musuh memilih gunting maka
-    if (you == opponent) {
-        yourScore += 1;
-        opponentScore += 1;
-    } else {
-        if (you == "rock") {
-            if (opponent == "scissors") { 
-                yourScore += 1;
-            } else if (opponent == "paper") {
-                opponentScore += 1;
-            }
-        }
-        else if (you == "scissors") {
-            if (opponent == "paper") { 
-                yourScore += 1;
-            } else if (opponent == "rock") {
-                opponentScore += 1;
-            }
-        }
-        else if (you == "paper") {
-            if (opponent == "rock") { 
-                yourScore += 1;
-            } else if (opponent == "scissors") {
-                opponentScore += 1;
-            }
+
+    if (you == "rock") {
+        if (opponent == "scissors") { 
+            yourScore += 1;
+        } else if (opponent == "paper") {
+            opponentScore += 1;
         }
     }
+    else if (you == "scissors") {
+        if (opponent == "paper") { 
+            yourScore += 1;
+        } else if (opponent == "rock") {
+            opponentScore += 1;
+        }
+    }
+    else if (you == "paper") {
+        if (opponent == "rock") { 
+            yourScore += 1;
+        } else if (opponent == "scissors") {
+            opponentScore += 1;
+        }
+    }
+
     document.getElementById("your-score").innerText = yourScore;
     document.getElementById("opponent-score").innerText = opponentScore;
+
+    // jika skor kamu sama dengan 3
+    if (yourScore == 3) {
+        alert("You Win!");
+        // reset score
+        yourScore = 0;
+        opponentScore = 0;
+
+        document.getElementById("your-score").innerText = yourScore;
+    document.getElementById("opponent-score").innerText = opponentScore;
+    } else if (opponentScore == 3) {
+        alert("You Lose!");
+        // reset score
+        yourScore = 0;
+        opponentScore = 0;
+
+        document.getElementById("your-score").innerText = yourScore;
+        document.getElementById("opponent-score").innerText = opponentScore;
+    }
 };

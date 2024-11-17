@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-image"></div>
+
     <!-- skor lawan -->
     <h1 id="opponent-score">0</h1>
     <!-- pilihan musuh -->
@@ -14,6 +16,9 @@
     <br>
     <img id="your-choice" src="" alt="">
     <div id="choices">
+        <img src="image/rock.png" onclick="selectChoice('rock')" alt="" id="rock">
+        <img src="image/paper.png" onclick="selectChoice('paper')" alt="" id="paper">
+        <img src="image/scissors.png" onclick="selectChoice('scissors')" alt="" id="scissors">
     </div>
     <h1 id="your-score">0</h1>
 

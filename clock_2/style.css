@@ -90,21 +90,3 @@
     transform: translateX(-50%);
 }
 
-
-
-
-
-/* Bayangkan kita punya sebuah kotak di halaman web yang menunjukkan jumlah jam. Kode CSS ini membantu kita menambahkan kata “HOURS” setelah angka jam di dalam kotak tersebut. */
-#hrs::after {
-    content: 'HOURS';
-} 
-
-/* Bayangkan kita punya sebuah kotak di halaman web yang menunjukkan jumlah menit. Kode CSS ini membantu kita menambahkan kata "MINS" setelah angka menit di dalam kotak tersebut. */
-#min::after {
-    content: 'MINS';
-}
-
-/* Bayangkan kita punya sebuah kotak di halaman web yang menunjukkan pelajaran detik. Kode CSS ini membantu kita menambahkan kata "SEC" setelah angka detik di dalam kotak tersebut. */
-#sec::after {
-    content: 'SEC';
-}
