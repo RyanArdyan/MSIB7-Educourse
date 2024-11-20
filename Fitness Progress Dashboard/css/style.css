@@ -1,0 +1,18 @@
+.kesalahan {
+    display: none;
+    color: red;
+}
+
+.hourly-forecast {
+    margin-top: 20px;
+}
+
+.hour {
+    display: inline-block;
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+}

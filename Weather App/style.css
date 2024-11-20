@@ -1,39 +1,22 @@
-/* untuk setiap element html */
 * {
-    /* menghilangkan margin top, right, bottom, left */
     margin: 0;
-    /* menghilangkan semua padding */
     padding: 0;
-    /* mengunakan font poppins sebagai yg utama lalu kalau tidak ada maka menggunakan sans-serif */
     font-family: 'Poppins', sans-serif;
-    /* menggunakan bingkai kotak jadi akan ada bingkai nya */
     box-sizing: border-box;
 }
 
-/* element tubuh */
 body {
-    /* mengatur warna latar belakang */
     background: #222;
 }
 
-/* mengatur class card */
 .card {
-    /* lebar nya 90% dari parent nya yaitu element body */
     width: 90%;
-    /* Tapi, jika kotak besar lebih dari 470 piksel, kartu kita akan berhenti membesar pada 470 piksel, jadi tidak lebih lebar dari itu. */
     max-width: 470px;
-    /* Linear gradient di CSS adalah cara untuk membuat transisi warna yang halus dari satu warna ke warna lainnya di sepanjang garis lurus. Ini seperti mencampur dua warna cat di atas kanvas dan melihat bagaimana mereka berbaur secara perlahan. */
     background: linear-gradient(135deg, #00feba, #5b548a);
-    /* warna: font nya */
     color: #fff;
-    /* margin atau jarak diluar kotak, di keempat sisi */
-    /* 100 itu margin atas, auto itu menggeser .card ke tengah secara horizontal dan 0 itu margin bawah */
     margin: 100px auto 0;
-    /* buat sudut lengkung */
     border-radius: 20px;
-    /* nilai pertama adalah atas dan bawah, lalu nilai kedua adalah kiri dan kanan */
     padding: 40px 35px;
-    /* semua konten di dalam .card akan berada di tengah */
     text-align: center;
 }
 

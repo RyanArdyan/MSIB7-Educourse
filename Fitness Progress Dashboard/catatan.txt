@@ -1,0 +1,6 @@
+Fitur: Menggunakan OpenWeatherMap API untuk mengecek cuaca sebelum olahraga di luar. Input aktivitas olahraga harian (lari, bersepeda, yoga, dll.). Visualisasi data (kalori terbakar, jarak, waktu) menggunakan Chart.js. apakah aplikasi diatas bisa dibuat tanpa menggunakan backend?
+
+Tampilan
+1. Menu cek cuaca, aktifkan lokasi saat ini lalu cek prediksi cuaca.
+2. Aktivitas olahraga.
+3. visualisasi data.

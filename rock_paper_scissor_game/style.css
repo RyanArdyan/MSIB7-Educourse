@@ -23,8 +23,6 @@ html, body {
     z-index: -1; /* Menempatkan gambar di belakang konten lainnya */
 }
 
-
-
 #opponent-choice {
     /* lebar */
     width: 150px;

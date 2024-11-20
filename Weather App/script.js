@@ -13,7 +13,6 @@ async function checkWeather(city) {
     // Ini seperti menunggu pak pos datang dengan membawa surat dari temanmu. fetch(apiUrl) adalah proses mengirim permintaan untuk mendapatkan surat (data) dari suatu alamat (apiUrl), dan await berarti kamu akan menunggu sampai surat itu tiba sebelum melanjutkan kegiatan lainnya.
     // ${apiKey} berarti mengambil nilai dari variable apiKey
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-
     // jika user mencari nama kota lalu nama kota nya tidak ditemukan maka
     if (response.status == 404) {
         // tampilkan
@@ -23,16 +22,13 @@ async function checkWeather(city) {
     } else {
         // tunggu sampai response json nya diterima, setelah diterima maka baru kerjakan kegiatan lagin
         let data = await response.json();
-
         // console.log(data);
-
         // seleksi .city lalu isinya berisi data.name
         document.querySelector(".city").innerHTML = data.name;
         // Math.round berfungsi membulatkan angka terdekat contohnya 4.5 akan menjadi 4 
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-
         if (data.weather[0].main == "Clouds") {
             weatherIcon.src = "images/clouds.png";
         } else if (data.weather[0].main == "Clear") {
@@ -44,7 +40,6 @@ async function checkWeather(city) {
         } else if (data.weather[0].main == "Mist") {
             weatherIcon.src = "images/mist.png";
         }
-
         // tampilkan tampilan dari .weather
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display = "none";

@@ -1,0 +1,62 @@
+/* Pastikan file CSS ini tersambung dengan benar ke HTML */
+html, body {
+    /* keluarga-font */
+    font-family: Arial, Helvetica, sans-serif;
+    /* penyelerasan text: tengah */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/tanjiro.jpg');
+    background-size: cover; /* Membuat gambar menutupi seluruh elemen */
+    background-position: center; /* Mengatur posisi gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah gambar terulang */
+    z-index: -1; /* Menempatkan gambar di belakang konten lainnya */
+}
+
+#opponent-choice {
+    /* lebar */
+    width: 150px;
+    /* tinggi */
+    height: 150px;
+    /* latar-belakang */
+    /* background-color: cyan; */
+    margin-top: 10px;
+}
+
+#your-choice {
+    /* lebar */
+    width: 150px;
+    /* tinggi */
+    height: 150px;
+    /* latar-belakang */
+    /* background-color: yellow; */
+    margin-top: 10px;
+}
+
+#choices {
+    width: 400px;
+    height: 80px;
+    /* background-color: green; */
+    /* angka pertama adalah atas dan bawah, auto adalah kiri dan kanan jadi ketengah */
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#choices img {
+    width: 80px;
+    height: 80px;
+}
+
+#opponent-score, #your-score {
+    color: white;
+}
