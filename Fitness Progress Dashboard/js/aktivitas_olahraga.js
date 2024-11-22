@@ -1,5 +1,7 @@
 // jika dokumen siap maka jalankan fungsi berikut
 $(document).ready(function() {
+    let myChart;
+
     // jika #activityForm dikirim maka jalankan fungsi berikut
     $('#activityForm').on('submit', function(event) {
         event.preventDefault(); // Mencegah form dari reload browser
@@ -30,7 +32,12 @@ $(document).ready(function() {
 
         // Menyiapkan data untuk Chart.js
         const ctx = $('#myChart')[0].getContext('2d');
-        const myChart = new Chart(ctx, {
+
+        if (myChart) {
+            myChart.destroy();
+        }
+
+        myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['Kalori Lari', 'Kalori Bersepeda'],

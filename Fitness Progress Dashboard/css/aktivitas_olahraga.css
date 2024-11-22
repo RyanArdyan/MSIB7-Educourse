@@ -87,7 +87,7 @@ input, select, button {
 }
 
 button {
-    background-color: #28a745;
+    background-color: red;;
     color: white;
     border: none;
     cursor: pointer;
@@ -95,6 +95,6 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: rgb(194, 2, 2);;
 }
 
