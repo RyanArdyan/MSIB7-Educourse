@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktivitas Olahraga</title>
+    <link rel="stylesheet" href="../css/aktivitas_olahraga.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Cek Cuaca</a></li>
+                <li><a href="aktivitas_olahraga.html">Aktivitas Olahraga Harian</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Input Aktivitas Olahraga</h1>
+        <form id="activityForm">
+            <label for="activity">Pilih Aktivitas:</label>
+            <select id="activity" required>
+                <option value="lari">Lari</option>
+                <option value="bersepeda">Bersepeda</option>
+            </select>
+
+            <label for="distance">Jarak (km):</label>
+            <input type="number" id="distance" required step="0.1" min="0">
+
+            <label for="time">Waktu (menit):</label>
+            <input type="number" id="time" required min="0">
+
+            <button type="submit">Hitung Kalori</button>
+        </form>
+
+        <canvas id="myChart" width="400" height="200"></canvas>
+        <div id="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/aktivitas_olahraga.js"></script>
+</body>
+
+</html>

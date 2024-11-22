@@ -4,3 +4,6 @@ Tampilan
 1. Menu cek cuaca, aktifkan lokasi saat ini lalu cek prediksi cuaca.
 2. Aktivitas olahraga.
 3. visualisasi data.
+
+
+Tolong buatkan fitur input aktivitas olahraga (lari, bersepeda) lalu cek jarak dan waktu lalu perlihatkan hasil kalori nya menggunakan chart js

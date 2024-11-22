@@ -1,3 +1,95 @@
+/* semua element */
+* {
+    /* Jadi, kalau kamu punya kotak mainan dengan ukuran tertentu, semua mainanmu tetap akan muat di dalam kotak tanpa keluar dari batasnya. */
+    box-sizing: border-box;
+}
+
+
+/* untuk semua element */
+body {
+    /* keluarga font */
+    font-family: Arial, sans-serif;
+    /* jarak diluar kotak */
+    margin: 0;
+    /* jarak antara konten dengan border */
+    padding: 0;
+    /* latar-belakang:  */
+    background-color: #f4f4f4;
+}
+
+header {
+    /* latar belakang */
+    background: #007BFF;
+    /* warna font */
+    color: #fff;
+    /* jarak antara konten dengan border */
+    padding: 10px 20px;
+    /* text-penyelerasan: kiri */
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+main {
+    /* Ini seperti memberi tahu elemen (kotak atau mainan) untuk menjadi elastis dan mudah diatur. Elemen-elemen ini akan mengatur dirinya secara otomatis agar berbaris dengan rapi, baik itu secara horizontal atau vertikal, tergantung dari instruksi lain yang kamu berikan. */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Mengatur elemen di dalamnya secara vertikal */
+    align-items: center; /* Memusatkan elemen secara horizontal */
+    justify-content: center; /* Memusatkan elemen secara vertikal */
+    min-height: 100vh; /* Memastikan main mengambil minimal tinggi viewport */
+    padding: 20px; /* Memberikan padding di sekitar konten */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek kedalaman */
+}
+
+nav ul {
+    /* gaya-daftar: tidak-ada */
+    list-style: none;
+    /* jarak antara konten dengan border */
+    padding: 0;
+}
+
+nav ul li {
+    /*  */
+    display: inline;
+    /* jarak diluar border, nilai pertama adalah y dan nilai kedua adalah x */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    /* warna putih */
+    color: #fff;
+    /* text-dekorasi: tidak-ada */
+    text-decoration: none;
+}
+
+main {
+    /* jarak antara konten dengan border */
+    padding: 20px;
+}
+
+section {
+    /* jarak diluar border */
+    margin: 20px 0;
+    /* jarak antara konten dengan border */
+    padding: 20px;
+    /* latar belakang */
+    background: #fff;
+    /* bingkai-radius atau sudut tumpul */
+    border-radius: 5px;
+    /* 0: Ini berarti bayangan tidak akan bergeser ke kiri atau kanan, jadi tetap di bawah kotak.
+    2px: Ini berarti bayangan akan bergeser sedikit ke bawah (2 piksel) dari kotaknya, seperti menambahkan sedikit jarak di bawah kotak. 5px: Ini berarti bayangan akan menyebar selebar 5 piksel, membuatnya tampak agak lembut dan tidak tajam. rgba(0, 0, 0, 0.1): Ini adalah warna bayangan. rgba adalah singkatan dari Red (Merah), Green (Hijau), Blue (Biru), dan Alpha (Transparansi). Di sini, warna bayangannya adalah hitam (0, 0, 0) tetapi sangat transparan (0.1), sehingga bayangan itu sangat lembut. */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* jika kotak (atau layar) lebih kecil dari 600 piksel, lakukan sesuatu yang khusus! */
+@media (max-width: 600px) {
+    nav ul li {
+        /* Oke mainan, sekarang kamu harus berdiri vertikal satu per satu." */
+        display: block;
+        /* Ini berarti memberikan jarak 10 piksel di atas dan di bawah setiap mainan (atau item di daftar menu), seperti memberikan ruang untuk bernapas agar tidak terlalu dekat satu sama lain. */
+        margin: 10px 0;
+    }
+}
+
 .kesalahan {
     display: none;
     color: red;
@@ -16,3 +108,68 @@
     border-radius: 5px;
     padding: 10px;
 }
+
+.search-container {
+    display: flex; /* Mengatur elemen di dalamnya agar sejajar */
+    justify-content: center; /* Memusatkan elemen dalam kontainer */
+    margin: 20px; /* Memberikan jarak di sekitar kontainer */
+}
+
+#locationInput {
+    padding: 10px; /* Memberikan ruang di dalam input */
+    border: 2px solid #007BFF; /* Warna garis border */
+    border-radius: 5px; /* Membuat sudut border menjadi melengkung */
+    font-size: 16px; /* Ukuran font */
+    width: 250px; /* Lebar input */
+    transition: border-color 0.3s; /* Efek transisi pada perubahan warna border */
+}
+
+#locationInput:focus {
+    border-color: #0056b3; /* Mengubah warna border saat input dalam fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+#searchButton {
+    padding: 10px 15px; /* Memberikan ruang di dalam tombol */
+    background-color: #007BFF; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default tombol */
+    border-radius: 5px; /* Membuat sudut tombol menjadi melengkung */
+    font-size: 16px; /* Ukuran font tombol */
+    cursor: pointer; /* Mengubah kursor saat hover di atas tombol */
+    margin-left: 10px; /* Memberikan jarak antara input dan tombol */
+    transition: background-color 0.3s; /* Efek transisi pada perubahan warna latar belakang */
+}
+
+#searchButton:hover {
+    background-color: #0056b3; /* Mengubah warna latar belakang saat hover */
+}
+
+#clock {
+    /* keluarga-font: */
+    font-family: 'Poppins', sans-serif;
+    /* ukuran-font */
+    font-size: 15px;
+    /* margin-bawah */
+    margin-bottom: 30px;
+    /* warna */
+    color: #fff;
+    /* latar-belakang */
+    background: #333;
+    /* text-penyelarasan */
+    text-align: center;
+    /* jarak diantara konten dengan border */
+    padding: 15px;
+    /* bingkai radius atau sudut bingkai */
+    border-radius: 10px;
+    /* bayangan kotak */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* lebar maksimal */
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+.text_center {
+    text-align: center;
+}
+

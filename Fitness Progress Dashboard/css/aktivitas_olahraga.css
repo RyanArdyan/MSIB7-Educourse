@@ -1,0 +1,100 @@
+/* semua element */
+* {
+    /* Jadi, kalau kamu punya kotak mainan dengan ukuran tertentu, semua mainanmu tetap akan muat di dalam kotak tanpa keluar dari batasnya. */
+    box-sizing: border-box;
+}
+
+
+/* untuk semua element */
+body {
+    /* keluarga font */
+    font-family: Arial, sans-serif;
+    /* jarak diluar kotak */
+    margin: 0;
+    /* jarak antara konten dengan border */
+    padding: 0;
+    /* latar-belakang:  */
+    background-color: #f4f4f4;
+}
+
+header {
+    /* latar belakang */
+    background: red;
+    /* warna font */
+    color: #fff;
+    /* jarak antara konten dengan border */
+    padding: 10px 20px;
+    /* text-penyelerasan: kiri */
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    /* gaya-daftar: tidak-ada */
+    list-style: none;
+    /* jarak antara konten dengan border */
+    padding: 0;
+}
+
+nav ul li {
+    /* li nya menjadi satu baris secara horizontal */
+    display: inline;
+    /* jarak diluar border, nilai pertama adalah y dan nilai kedua adalah x */
+    margin: 0 10px;
+}
+
+nav ul li a {
+    /* warna putih */
+    color: #fff;
+    /* text-dekorasi: tidak-ada */
+    text-decoration: none;
+}
+
+.container {
+    /* kode max-width: 600px; itu seperti memberi perintah kepada kotak mainan, "Hei kotak, kamu tidak boleh lebih lebar dari 600 piksel." Jadi, meskipun isi di dalam kotak bertambah banyak, kotak tersebut akan tetap mempertahankan lebar maksimalnya yaitu 600 piksel. */
+    max-width: 600px;
+    /* jarak diluar kotak, nilai pertama adalah y dan nilai kedua adalah x */
+    margin: 10px auto;
+    background: white;
+    /* jarak antara konten dengan border */
+    padding: 30px;
+    /* bingkai-radius, sudut kotak */
+    border-radius: 8px;
+    /* bayangan kotak */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    /* perataan teks */
+    text-align: center;
+}
+
+form {
+    /* display: flex;: Ini seperti memberi tahu kotak form untuk menjadi elastis dan bisa diatur dengan mudah. Balok-balok mainan yang ada di dalam kotak ini akan bisa berbaris dengan rapi. */
+    display: flex;
+    /* Ini seperti memberi instruksi kepada balok-balok mainan agar berbaris ke bawah secara vertikal, satu di atas yang lain, seperti menyusun tumpukan buku. */
+    flex-direction: column;
+}
+
+label {
+    /* nilai pertama atas, nilai kedua adalah x dan nilai ketiga adalah bawah */
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
