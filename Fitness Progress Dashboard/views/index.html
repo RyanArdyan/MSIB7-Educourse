@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cek Cuaca dan Aktivitas Olahraga</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -17,11 +15,9 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section id="cuaca">
             <h2 class="text_center">Cek Cuaca</h2>
-
             <div id="clock" class="text_center"></div>
             <input type="text" id="locationInput" placeholder="Enter a city">
             <button id="searchButton">Search</button>
@@ -30,12 +26,10 @@
                 <p id="temperature"></p>
                 <p id="description"></p>
             </div>
-
             <div class="hourly-forecast text_center">
                 <h3>Hourly Forecast</h3>
                 <div id="hourlyForecast"></div>
             </div>
-
             <div class="error kesalahan">City not found. Please try again.</div>
         </section>
     </main>
@@ -44,5 +38,4 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
-
 </html>

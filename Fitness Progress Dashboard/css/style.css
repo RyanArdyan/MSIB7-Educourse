@@ -38,6 +38,8 @@ main {
     min-height: 100vh; /* Memastikan main mengambil minimal tinggi viewport */
     padding: 20px; /* Memberikan padding di sekitar konten */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek kedalaman */
+    /* jarak antara konten dengan border */
+    padding: 20px;
 }
 
 nav ul {
@@ -61,11 +63,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-    /* jarak antara konten dengan border */
-    padding: 20px;
-}
-
 section {
     /* jarak diluar border */
     margin: 20px 0;
@@ -80,7 +77,6 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* jika kotak (atau layar) lebih kecil dari 600 piksel, lakukan sesuatu yang khusus! */
 @media (max-width: 600px) {
     nav ul li {
         /* Oke mainan, sekarang kamu harus berdiri vertikal satu per satu." */
@@ -90,6 +86,7 @@ section {
     }
 }
 
+/* INI BELUM INI BELUM */
 .kesalahan {
     display: none;
     color: red;
@@ -97,6 +94,34 @@ section {
 
 .hourly-forecast {
     margin-top: 20px;
+}
+
+#clock {
+    /* keluarga-font: */
+    font-family: 'Poppins', sans-serif;
+    /* ukuran-font */
+    font-size: 15px;
+    /* margin-bawah */
+    margin-bottom: 30px;
+    /* warna */
+    color: #fff;
+    /* latar-belakang */
+    background: #333;
+    /* text-penyelarasan */
+    text-align: center;
+    /* jarak diantara konten dengan border */
+    padding: 15px;
+    /* bingkai radius atau sudut bingkai */
+    border-radius: 10px;
+    /* bayangan kotak */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* lebar maksimal */
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+.text_center {
+    text-align: center;
 }
 
 .hour {
@@ -143,33 +168,5 @@ section {
 
 #searchButton:hover {
     background-color: #0056b3; /* Mengubah warna latar belakang saat hover */
-}
-
-#clock {
-    /* keluarga-font: */
-    font-family: 'Poppins', sans-serif;
-    /* ukuran-font */
-    font-size: 15px;
-    /* margin-bawah */
-    margin-bottom: 30px;
-    /* warna */
-    color: #fff;
-    /* latar-belakang */
-    background: #333;
-    /* text-penyelarasan */
-    text-align: center;
-    /* jarak diantara konten dengan border */
-    padding: 15px;
-    /* bingkai radius atau sudut bingkai */
-    border-radius: 10px;
-    /* bayangan kotak */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* lebar maksimal */
-    max-width: 200px;
-    margin: 20px auto;
-}
-
-.text_center {
-    text-align: center;
 }
 
