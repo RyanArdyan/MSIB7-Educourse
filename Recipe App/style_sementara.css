@@ -1,0 +1,21 @@
+.recipe-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #b5b5ba;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a1a1a1;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ebebeb;
+}
